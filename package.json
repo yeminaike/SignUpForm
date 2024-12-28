@@ -1,0 +1,27 @@
+{
+  "name": "e-wallet-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "bundle": "tsc",
+    "build": "tsc && babel-node dist/index.js",
+    "watch": "tsc --w",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --forceExit",
+    "dev": "nodemon --experimental-json-modules  server.js",
+    "start": "nodemon --experimental-json-modules --exec babel-node public/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@googleapis/sheets": "^9.3.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "google-auth-library": "^9.15.0",
+    "googleapis": "^144.0.0",
+    "nodemon": "^3.1.9"
+  }
+}
